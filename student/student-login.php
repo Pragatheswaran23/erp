@@ -91,6 +91,7 @@
 </form>
 </div>
 
+
 <main class="main">
 
 
@@ -106,17 +107,17 @@
 </div>
 <p>Student Login</p>
 </div>
-<form action="login.php" method="POST">
+<form action="student-login.php" method="POST">
 <div class="form-group">
 <label>Student Id</label>
-<input type="email" name = "email" class="form-control" placeholder="Your Email">
+<input type="text" name = "studentId" id ="studentId" class="form-control" placeholder="Student ID">
 </div>
 <div class="form-group">
 <label>Password</label>
-<input type="password" name ="password" class="form-control" placeholder="Your Password">
+<input type="password" name ="password" id = "password" class="form-control" placeholder="Your Password">
 </div>
 <div class="d-flex align-items-center">
-<button type="submit" class="theme-btn"><i class="far fa-sign-in"></i> Login</button>
+<button type="submit" class="theme-btn" name ="login" id = "login" ><i class="far fa-sign-in"></i> Login</button>
 </div>
 </form>
 </div>
@@ -126,9 +127,32 @@
 
 </main>
 
+<?php if (isset($_POST['login'])) {
+    $username  = $_POST['username'];
+    $password  = $_POST['password'];
+    /*mysqli_real_escape_string($conn, $username);
+    mysqli_real_escape_string($conn, $password);
+    $query = "SELECT * FROM login WHERE  password='$password' and username='$username'";
+    $result = mysqli_query($conn , $query) or die (mysqli_error($conn));
+    $row = mysqli_fetch_array($result);
+    if (mysqli_num_rows($result) > 0) {
+        $_SESSION=$row;
+        //header("Location: index.php");
+        echo "<script>window.history.go(-2);</script>";
+    }
+    else {
+        echo "<script>alert('invalid username/password');
+        window.location.href= 'index.php';</script>";
+    }*/
 
+    if($username = "admin" && $password = "admin@123"){
+        header('Location: student-details.php');
+    }
+}
+?>
 
 <a href="#" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
+
 
 
 <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../assets/js/jquery-3.7.1.min.js"></script>
