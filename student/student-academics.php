@@ -184,18 +184,12 @@
                                     <th scope="row">Semester 8</th>
                                     <td>9.9</td>
                                 </tr>
+                                <tr>
+                                    <th scope="row">Total CGPA</th>
+                                    <td>9.5</td>
+                                </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                            <h6>Total CGPA</h6>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="form-group">
-                            <label>9.5</label>
-                        </div>
                     </div>
                 </div>
             </form>
